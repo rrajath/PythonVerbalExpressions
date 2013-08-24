@@ -53,6 +53,9 @@ class VerEx(object):
     def anything(self):
         return self.add('(.*)')
 
+    def must_be_digit(self):
+        return self.add('[\d]+')
+
     @re_escape
     def anything_but(self, value):
         return self.add('([^' + value + ']*)')
